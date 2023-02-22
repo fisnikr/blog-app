@@ -19,23 +19,19 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 Route::get('/', function () {
     
-
-
-    $posts =  Post::all(); 
     // ddd($posts[2]->title);
     return view('posts', [
-        'posts' => $posts
+        'posts' => Post::all()
     ]);
 });
 
-Route::get('posts/{post}', function ($slug) {
+Route::get('posts/{post:slug}', function (Post $post) {
 
-    // Find a post by its slug and pass it to a view called "post"
-    $post = Post::find($slug);
+  
 
     return view('post', [
-        'post' =>Post::find($slug)
+        'post' => $post
     ]);
 
 
-})->where('post', '[A-z_\-]+');
+});

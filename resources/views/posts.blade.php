@@ -10,7 +10,10 @@
             </a>
         </h2>
         <div class="flex flex-col">
+        <p>
+            By <a href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a> in
         <a href="/categories/{{ $post->category->slug }}" class="text-blue-400 font-semibold">{{ $post->category->name }}</a>
+        </p>
         {{ $post->excerpt }}
         </div>
      </article>   

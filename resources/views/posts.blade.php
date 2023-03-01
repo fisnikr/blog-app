@@ -10,7 +10,7 @@
             </a>
         </h2>
         <div class="flex flex-col">
-            <a href="#" class="text-blue-400 font-semibold">{{ $post->category->name }}</a>
+        <a href="/categories/{{ $post->category->slug }}" class="text-blue-400 font-semibold">{{ $post->category->name }}</a>
         {{ $post->excerpt }}
         </div>
      </article>   

@@ -6,7 +6,11 @@
         <h2 class="font-bold text-3xl">
         {{ $post->title }}
         </h2>
+        <p>
+            By <a href="#">{{ $post->user->name }}</a> in
         <a href="/categories/{{ $post->category->slug }}" class="text-blue-400 font-semibold">{{ $post->category->name }}</a>
+        </p>
+
         <div class="py-2">
         {!! $post->body !!}
         </div>

@@ -9,7 +9,8 @@
                 {{ $post->title }}
             </a>
         </h2>
-        <div>
+        <div class="flex flex-col">
+            <a href="#" class="text-blue-400 font-semibold">{{ $post->category->name }}</a>
         {{ $post->excerpt }}
         </div>
      </article>   

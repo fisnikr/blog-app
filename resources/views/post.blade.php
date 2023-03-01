@@ -6,6 +6,7 @@
         <h2 class="font-bold text-3xl">
         {{ $post->title }}
         </h2>
+        <a href="#" class="text-blue-400 font-semibold">{{ $post->category->name }}</a>
         <div class="py-2">
         {!! $post->body !!}
         </div>
